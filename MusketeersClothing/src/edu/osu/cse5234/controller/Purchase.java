@@ -25,11 +25,12 @@ public class Purchase {
 			Item itm = new Item();
 			itm.setName(String.valueOf(i));
 			itm.setPrice(String.valueOf(i));
-			itm.setQuantity(String.valueOf(i));
+			//itm.setQuantity(String.valueOf(i));
 			list.add(itm);
 		}
 		Order order = new Order();
 		order.setItems(list);
+		request.setAttribute("order", order);
 		request.setAttribute("order", order);
 		return "OrderEntryForm";
 	}
@@ -67,6 +68,9 @@ public class Purchase {
 	
 	@RequestMapping(path = "/viewOrder", method = RequestMethod.GET)
 	public String viewOrder(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		Order order = new Order();
+		order = (Order) request.getSession().getAttribute("order");
+		request.setAttribute("order", order);
 		return "ViewOrder";
 	}
 	

@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="edu.osu.cse5234.model.PaymentInfo" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Payment Entry</title>
+</head>
+<body>
+	
+	<% PaymentInfo paymentInfo = (PaymentInfo)request.getAttribute("payment"); %>
+	<form:form modelAttribute="payment" method="post" action="purchase/confirmation" >
+		<table>
+			<c:forEach items="${payment.items}" var="item" varStatus="loop">
+				<tr>
+				private String cardNumber;
+	private String epirationDate;
+	private String cvv;
+	private String holderName;
+	
+					<td><form:input path="cardNumber" /></td>
+					<td>$<form:input path="epirationDate" /></td>
+					<td><form:input path="cvv" /></td>
+					<td><form:input path="holderName" /></td>
+					
+	         	</tr>
+	   		</c:forEach>
+			<tr>
+				<td colspan="2"><input type="submit" value="Purchase"></td>
+			</tr>
+		</table>
+	</form:form>
+
+</body>
+</html>

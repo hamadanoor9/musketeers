@@ -5,6 +5,8 @@ public class PaymentInfo {
 	private String epirationDate;
 	private String cvv;
 	private String holderName;
+	
+	
 	public String getCardNumber() {
 		return cardNumber;
 	}

@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ page import="edu.osu.cse5234.model.Order" %>
 <%@ page import="edu.osu.cse5234.model.Item" %>
+
 <%@ page import="java.util.List" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -13,13 +14,13 @@
 </head>
 <body>
 	<% Order order = (Order)request.getAttribute("order"); %>
-	<form:form>modelAttribute="order" method="post" action="purchase/submitItems">
+	<form:form modelAttribute="order" method="post" action="purchase/submitItems" >
 		<table>
-			<c:forEach items="${order.getItems()}" var="item" varStatus="loop">
+			<c:forEach items="${order.items}" var="item" varStatus="loop">
 				<tr>
-					<td><c:out value="${item.getName()}"></c:out></td>
-					<td><c:out value="${item.getPrice()}"></c:out></td>
-					<%-- <td><form:input path="order.getItems().get(${loop.index}).quantity}" /></td> --%>
+					<td><form:input path="items[${loop.index}].name" readonly="true" /></td>
+					<td>$<form:input path="items[${loop.index}].price" readonly="true" /></td>
+					<td><form:input path="items[${loop.index}].quantity" /></td>
 	         	</tr>
 	   		</c:forEach>
 			<tr>

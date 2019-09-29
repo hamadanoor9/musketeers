@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ page import="edu.osu.cse5234.model.Order" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Order</title>
+</head>
+<body>
+	<% Order order = (Order) request.getAttribute("order"); %>
+	No Order yet!
+</body>
+</html>

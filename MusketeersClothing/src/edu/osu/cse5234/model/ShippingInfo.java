@@ -7,6 +7,8 @@ public class ShippingInfo {
 	private String city;
 	private String state;
 	private String zip;
+	
+	
 	public String getName() {
 		return name;
 	}

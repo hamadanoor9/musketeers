@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ page import="edu.osu.cse5234.model.Order" %>
+    <%@ page import="edu.osu.cse5234.model.Item" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Order</title>
+</head>
+<body>
+	<% Order order = (Order) request.getAttribute("order"); %>
+	<table>
+			<% for(List<Items> items: order.getItems()); %>
+				<tr>
+					<td><form:input path="items[${loop.index}].name" readonly="true" /></td>
+					<td>$<form:input path="items[${loop.index}].price" readonly="true" /></td>
+					<td><form:input path="items[${loop.index}].quantity" readonly="true"/></td>
+	         	</tr>
+	   		</c:forEach>
+			<tr>
+				<td colspan="2"><input type="submit" value="Purchase"></td>
+			</tr>
+		</table>
+	No Order yet!
+</body>
+</html>
