@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Musketeers Clothing!</title>
 </head>
 <body>
-	<h1>Hello New!!</h1>
+	<h1>Hello! Welcome to Musketeers Clothing!</h1>
+	
 </body>
 </html>

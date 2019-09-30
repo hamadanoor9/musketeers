@@ -7,17 +7,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/hello")
+@RequestMapping("/")
 public class HelloWorldController {
 	
-	@RequestMapping(method = RequestMethod.GET)
-	public void printHello(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		response.getWriter().println("Hello World Spring MVC!");
-	}
-	
-	@RequestMapping(path = "/new", method = RequestMethod.GET)
+	@RequestMapping(path = "/", method = RequestMethod.GET)
 	public String printHelloNew() throws Exception {
-		return "HelloJSP";
+		return "Home";
 	}
 
 
