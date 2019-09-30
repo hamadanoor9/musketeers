@@ -13,6 +13,7 @@
 	<%if(order == null){ %>
 	 <h1><%="No Order yet!" %></h1>
 	 <% }else{%>
+
 	<table border= "1">
 		<tr>
 			<th>Name</th>

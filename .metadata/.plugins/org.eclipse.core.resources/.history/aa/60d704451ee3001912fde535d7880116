@@ -91,7 +91,7 @@
 		</table>
 		<br/>
 		<br/>
-		<form action= "confirmOrder" method="post">
+		<form action= "ConfirmOrder" >
 			<input type="submit" value="Confirm">
 		</form>
 	
