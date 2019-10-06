@@ -7,7 +7,7 @@
 <title>Musketeers Clothing!</title>
 </head>
 <body>
-	<h1>Hello! Welcome to Musketeers Clothing!</h1>
-	
+	<jsp:include page="Header.jsp" />
+	<jsp:include page="Footer.jsp" />
 </body>
 </html>
