@@ -6,7 +6,8 @@
 <meta charset="UTF-8">
 <title>Copyright Information</title>
 <body>Copyright Information <br>
-Rachelle has no idea what to put here.</body>
+
+PRIVACY POLICY</body>
 </head>
 <body>
 

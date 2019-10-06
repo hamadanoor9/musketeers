@@ -14,6 +14,18 @@ public class HelloWorldController {
 	public String printHelloNew() throws Exception {
 		return "Home";
 	}
+	
+	@RequestMapping(path = "/aboutus", method = RequestMethod.GET)
+	public String aboutUs() throws Exception {
+		return "AboutUs";
+	}
+	
+	@RequestMapping(path = "/contactus", method = RequestMethod.GET)
+	public String contactUs() throws Exception {
+		return "ContactUs";
+	}
+	
+	
 
 
 }
