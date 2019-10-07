@@ -5,9 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Copyright Information</title>
+<br>
+<br>
 <body>Copyright Information <br>
 
-PRIVACY POLICY</body>
+PRIVACY POLICY | TERMS OF USE</body>
 </head>
 <body>
 

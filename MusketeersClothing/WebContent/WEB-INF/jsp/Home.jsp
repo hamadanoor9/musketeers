@@ -8,6 +8,9 @@
 </head>
 <body>
 	<jsp:include page="Header.jsp" />
+<h2>Musketeers Clothing</h2>
+<h4>We don’t follow the trend, we lead it.</h4>
+We aim at offering you the best and fanciest clothing, shoes and accessories.
 	<jsp:include page="Footer.jsp" />
 </body>
 </html>
