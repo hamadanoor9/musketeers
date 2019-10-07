@@ -26,6 +26,11 @@ He likes rock&roll, e-sports and art.
 <br>Oliver Zhou, Co-Founder, M.S. of OSU, good at doing nothing and enjoying his life. 
 <br>Find him at zhou.2866@buckeyemail.osu.edu but he won’t reply.
 
+<br><img src="images/MA.jpeg" height = "240" width="240">
+<br>Mohamed Ahmed is the CTO of Masketeers clothing. He has a PhD in data science from The Ohio State University. 
+<br>His hobbies are playing soccer and traveling.
+
+
 </body>
 </head>
 <body>

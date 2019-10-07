@@ -6,7 +6,11 @@
 <meta charset="UTF-8">
 <title>Contract Us!</title>
 </head>
+
+	<jsp:include page="Header.jsp" />
 <body>
+
+
 OPENING HOURS
 <br>We offer 24/7 customer service
 <br> </br>
