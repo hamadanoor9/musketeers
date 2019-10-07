@@ -21,17 +21,24 @@ public class Purchase {
 	@RequestMapping(method = RequestMethod.GET)
 	public String viewOrderEntryForm(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		List<Item> list = new ArrayList<Item>();
+		String[] products = new String[5];
+		products[0] = "Jacket";
+		products[1] = "Pants";
+		products[2] = "Sneakers";
+		products[3] = "Shirt";
+		products[4] = "Shorts";
+					
 		for(int i = 0; i < 5; i++) {
 			Item itm = new Item();
-			itm.setName(String.valueOf(i));
-			itm.setPrice(String.valueOf(i));
-			//itm.setQuantity(String.valueOf(i));
+			itm.setName(products[i]);
+			itm.setPrice(String.valueOf(i+1));
 			list.add(itm);
 		}
 		Order order = new Order();
 		order.setItems(list);
+		
 		request.setAttribute("order", order);
-		request.setAttribute("order", order);
+		System.out.println(order.items.get(0).getName());
 		return "OrderEntryForm";
 	}
 	

@@ -3,14 +3,10 @@
 <%@ page import="edu.osu.cse5234.model.PaymentInfo" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Payment Entry</title>
-</head>
-<body>
-	
+    <jsp:include page="Header.jsp" />
+
+<div class="jumbotron">
+  <div class="container">
 	<% PaymentInfo paymentInfo = (PaymentInfo)request.getAttribute("payment"); %>
 	<form:form modelAttribute="payment" method="post" action="submitPayment" >
 		<table>
@@ -35,6 +31,7 @@
 			</tr>
 		</table>
 	</form:form>
+  </div>
+</div>
 
-</body>
-</html>
+    <jsp:include page="Footer.jsp" />

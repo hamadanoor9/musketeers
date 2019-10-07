@@ -1,24 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Meet the Team</title>
+
 <jsp:include page="Header.jsp" />
-<body>
+
 <h2>ABOUT US</h2>
-<img src="images/JKM_4153.jpg" height="240" width="160">
+<!-- <img src="images/JKM_4153.jpg" height="240" width="160">
 <br>
 Rachelle Magaram is the CFO of Musketeers Clothing and a senior at OSU. 
-<br>She is studying computer science & engineering.
+She is studying computer science & engineering.
 She likes reading, biking, and analyzing pop culture. 
 <br>You can reach Rachelle at rmmagaram@gmail.com
 
 <br><img src="images/IMG_3451.jpg" height = "240" width="240">
 <br>
-Honghui Bao is the artistic director and chief executive officer of Musketeers Clothing.
-<br>Honghui is a M.S. student studying computer science & engineering.
+Honghui Bao is the artistic director and chief executive officer of Musketeers Clothing. 
+Honghui is a M.S. student studying computer science & engineering.
 He likes rock&roll, e-sports and art.
 <br> You can reach Honghui at baohonghui1996@gmail.com
 
@@ -28,12 +24,65 @@ He likes rock&roll, e-sports and art.
 
 <br><img src="images/MA.jpeg" height = "240" width="240">
 <br>Mohamed Ahmed is the CTO of Masketeers clothing. He has a PhD in data science from The Ohio State University. 
-<br>His hobbies are playing soccer and traveling.
-<br>You can reach Mohamed at afsenqu2@gmail.com
+His hobbies are playing soccer and traveling.
+<br>You can reach Mohamed at afsenqu2@gmail.com -->
+<div class="jumbotron">
+  <div class="container">
+	<div class="row">
+	  <div class="col-xs-6 col-md-3">
+	    <div class="thumbnail">
+	      <img src="images/IMG_3451.jpg" alt="Honghui Bao">
+	      <div class="caption">
+	        <h3>Honghui Bao, CEO</h3>
+	        <p>Honghui Bao is the artistic director and chief executive officer of Musketeers Clothing. 
+				Honghui is a M.S. student studying computer science & engineering.
+				He likes rock&roll, e-sports and art.</p>
+				<br> <p>You can reach Honghui at baohonghui1996@gmail.com</p>
+	      </div>
+	    </div>
+	  </div>
+	  
+	  <div class="col-xs-6 col-md-3">
+	    <div class="thumbnail">
+	      <img src="images/JKM_4153.jpg" alt="Rachelle">
+	      <div class="caption">
+	        <h3>Rachelle Magaram, CFO</h3>
+	        <p>Rachelle Magaram is the CFO of Musketeers Clothing and a senior at OSU. 
+				She is studying computer science & engineering.
+				She likes reading, biking, and analyzing pop culture.</p>
+			<br><p>You can reach Rachelle at rmmagaram@gmail.com</p>
+	      </div>
+	    </div>
+	  </div>
+	  
+	  <div class="col-xs-6 col-md-3">
+	    <div class="thumbnail">
+	      <img src="images/MA.jpeg" alt="Mohamed">
+	      <div class="caption">
+	        <h3>Mohamed Ahmed, CIO</h3>
+	        <p>Mohamed Ahmed is the CIO of Masketeers clothing. He has a PhD in data science from The Ohio State University. 
+				His hobbies are playing soccer and traveling.</p>
+			<br><p>You can reach Mohamed at afsenqu2@gmail.com</p>
+	      </div>
+	    </div>
+	  </div>
+	  
+	  <div class="col-xs-6 col-md-3">
+	    <div class="thumbnail">
+	      <img src="images/Ollie.jpg" alt="Oliver">
+	      <div class="caption">
+	        <h3>Oliver Zhou, GM</h3>
+	        <p>Oliver Zhou, Co-Founder, M.S. of OSU, good at doing nothing and enjoying his life.</p>
+			<br><p>Find him at zhou.2866@buckeyemail.osu.edu but he won’t reply.</p>
+	      </div>
+	    </div>
+	  </div>
+	    
+	    
+	   
+	  
+	</div>
+	</div>
+</div>
 
-</body>
-</head>
-<body>
-
-</body>
-</html>
+<jsp:include page="Footer.jsp" />

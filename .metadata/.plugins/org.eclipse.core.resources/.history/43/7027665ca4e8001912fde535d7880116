@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Menu</title>
+<body>
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="/MusketeersClothing">Home</a></li>
+  <li role="presentation"><a href="/MusketeersClothing/purchase">Shop</a></li>
+  <li role="presentation"><a href="/MusketeersClothing/aboutus">About Us</a></li>
+  <li role="presentation"><a href="/MusketeersClothing/contactus">Contact Us</a></li>
+  
+</ul>
+
+</body>
+
+</head>
+<body>
+
+</body>
+</html>

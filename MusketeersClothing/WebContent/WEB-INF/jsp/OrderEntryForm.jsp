@@ -6,16 +6,18 @@
 <%@ page import="java.util.List" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Order Entry</title>
-</head>
-<body>
+<jsp:include page="Header.jsp" />
+<div class="jumbotron">
+  <div class="container">
 	<% Order order = (Order)request.getAttribute("order"); %>
 	<form:form modelAttribute="order" method="post" action="purchase/submitItems" >
 		<table>
+		<tr>
+			<th>Product Name</th>
+			<th>Product Price</th>
+			<th>Product Quantity</th>
+			
+		</tr>
 			<c:forEach items="${order.items}" var="item" varStatus="loop">
 				<tr>
 					<td><form:input path="items[${loop.index}].name" readonly="true" /></td>
@@ -28,5 +30,6 @@
 			</tr>
 		</table>
 	</form:form>
-</body>
-</html>
+  </div>
+</div>
+<jsp:include page="Footer.jsp" />

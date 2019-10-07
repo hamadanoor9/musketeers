@@ -2,22 +2,18 @@
     pageEncoding="UTF-8"%>
     <%@ page import="edu.osu.cse5234.model.Order" %>
     <%@ page import="edu.osu.cse5234.model.Item" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Order</title>
-</head>
-<body>
+<jsp:include page="Header.jsp" />
+<div class="jumbotron">
+  <div class="container">
 	<% Order order = (Order) request.getAttribute("order"); %>
 	<%if(order == null){ %>
 	 <h1><%="No Order yet!" %></h1>
 	 <% }else{%>
 	<table border= "1">
 		<tr>
-			<th>Name</th>
-			<th>Price</th>
-			<th>Quantity</th>
+			<th>Product Name</th>
+			<th>Product Price</th>
+			<th>Product Quantity</th>
 			
 		</tr>
 			<% for(Item item: order.getItems()){ %>
@@ -34,6 +30,7 @@
 		<form action= "viewConfirmation" >
 			<input type="submit" value="Next">
 		</form>
+  </div>
+</div>
 	
-</body>
-</html>
+<jsp:include page="Footer.jsp" />

@@ -3,13 +3,9 @@
 <%@ page import="edu.osu.cse5234.model.ShippingInfo" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Shipping Entry</title>
-</head>
-<body>
+ <jsp:include page="Header.jsp" />
+<div class="jumbotron">
+  <div class="container">
 	<% ShippingInfo shippingInfo = (ShippingInfo) request.getAttribute("shipping"); %>
 	<form:form modelAttribute="shipping" method="post" action="submitShipping" >
 		<table>
@@ -40,5 +36,7 @@
 			</tr>
 		</table>
 	</form:form>
-</body>
-</html>
+  </div>
+</div>
+    <jsp:include page="Footer.jsp" />
+	

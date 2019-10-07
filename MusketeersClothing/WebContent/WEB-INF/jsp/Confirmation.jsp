@@ -4,13 +4,9 @@
 <%@ page import="edu.osu.cse5234.model.Item" %>
 <%@ page import="edu.osu.cse5234.model.PaymentInfo" %>
 <%@ page import="edu.osu.cse5234.model.ShippingInfo" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Confirmation</title>
-</head>
-<body>
+    <jsp:include page="Header.jsp" />
+<div class="jumbotron">
+  <div class="container">
 	<% Order order = (Order) session.getAttribute("order"); %>
 	<%if(order == null){ %>
 	 <h1><%="Nothing to confirm!" %></h1>
@@ -95,5 +91,6 @@
 			<input type="submit" value="Confirm">
 		</form>
 	
-</body>
-</html>
+</div>
+</div>
+    <jsp:include page="Footer.jsp" />
