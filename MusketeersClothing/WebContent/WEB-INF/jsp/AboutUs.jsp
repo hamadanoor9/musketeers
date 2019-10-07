@@ -29,7 +29,7 @@ He likes rock&roll, e-sports and art.
 <br><img src="images/MA.jpeg" height = "240" width="240">
 <br>Mohamed Ahmed is the CTO of Masketeers clothing. He has a PhD in data science from The Ohio State University. 
 <br>His hobbies are playing soccer and traveling.
-
+<br>You can reach Mohamed at afsenqu2@gmail.com
 
 </body>
 </head>
