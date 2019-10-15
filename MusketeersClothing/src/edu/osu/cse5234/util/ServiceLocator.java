@@ -18,7 +18,7 @@ public class ServiceLocator {
 	public static InventoryService getInventoryService() {
 		try {
 			return (InventoryService) InitialContext.doLookup(
-				"java:global/MyGolf-InventoryManagement-EJBEAR/MyGolf-InventoryManagement-EJB/InventoryServiceBean!edu.osu.cse5234.business.view.InventoryService");
+				"java:global/Musketeers-InventoryManagement-EJBEAR/Musketeers-InventoryManagement-EJB/InventoryServiceBean!edu.osu.cse5234.business.view.InventoryService");
 		} catch (NamingException ne) {
 			throw new RuntimeException(ne);
 			}

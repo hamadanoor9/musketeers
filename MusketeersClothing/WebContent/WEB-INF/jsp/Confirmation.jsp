@@ -1,17 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="edu.osu.cse5234.model.Order" %>
-<%@ page import="edu.osu.cse5234.model.Item" %>
+<%@ page import="edu.osu.cse5234.business.view.Item" %>
 <%@ page import="edu.osu.cse5234.model.PaymentInfo" %>
 <%@ page import="edu.osu.cse5234.model.ShippingInfo" %>
     <jsp:include page="Header.jsp" />
 <div class="jumbotron">
   <div class="container">
 	<% Order order = (Order) session.getAttribute("order"); %>
+	
+	
 	<%if(order == null){ %>
 	 <h1><%="Nothing to confirm!" %></h1>
 	 <% }else{%>
-
+	 	
+			<h1><%=  request.getSession().getAttribute("confirm") %></h1>
+			
 	<table border= "1">
 		<tr>
 			<th>Name</th>
