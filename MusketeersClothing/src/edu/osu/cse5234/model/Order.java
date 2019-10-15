@@ -1,7 +1,7 @@
 package edu.osu.cse5234.model;
 
 import java.util.List;
-
+import edu.osu.cse5234.business.view.*;
 public class Order {
 	public List<Item> items;
 	public List<Item> getItems() {

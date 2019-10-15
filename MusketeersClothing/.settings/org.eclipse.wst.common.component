@@ -8,6 +8,9 @@
                         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="Musketeers-InventoryManagement-EJBClient.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Musketeers-InventoryManagement-EJBClient/Musketeers-InventoryManagement-EJBClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
                         
         
         <property name="java-output-path" value="/MusketeersClothing/build/classes"/>

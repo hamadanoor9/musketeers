@@ -3,6 +3,7 @@
 	<name>MusketeersClothing</name>
 	<comment></comment>
 	<projects>
+		<project>Musketeers-InventoryManagement-EJBClient</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

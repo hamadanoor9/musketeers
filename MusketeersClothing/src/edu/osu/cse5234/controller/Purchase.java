@@ -10,43 +10,36 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import edu.osu.cse5234.model.Item;
+import edu.osu.cse5234.business.view.*;
 import edu.osu.cse5234.model.Order;
 import edu.osu.cse5234.model.PaymentInfo;
 import edu.osu.cse5234.model.ShippingInfo;
+import edu.osu.cse5234.util.*;
 
 @Controller
 @RequestMapping("/purchase")
 public class Purchase {
 	@RequestMapping(method = RequestMethod.GET)
 	public String viewOrderEntryForm(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		List<Item> list = new ArrayList<Item>();
-		String[] products = new String[5];
-		products[0] = "Jacket";
-		products[1] = "Pants";
-		products[2] = "Sneakers";
-		products[3] = "Shirt";
-		products[4] = "Shorts";
-					
-		for(int i = 0; i < 5; i++) {
-			Item itm = new Item();
-			itm.setName(products[i]);
-			itm.setPrice(String.valueOf(i+1));
-			list.add(itm);
-		}
+		Inventory inventory = ServiceLocator.getInventoryService().getAvailableInventory();
 		Order order = new Order();
-		order.setItems(list);
-		
+		List<Item> items = inventory.getItems();
+		order.setItems(items);
 		request.setAttribute("order", order);
-		System.out.println(order.items.get(0).getName());
 		return "OrderEntryForm";
 	}
 	
 	// items?
 	@RequestMapping(path = "/submitItems", method = RequestMethod.POST)
 	public String submitItems(@ModelAttribute("order") Order order, HttpServletRequest request) throws Exception {
-		request.getSession().setAttribute("order", order);
-		return "redirect:/purchase/paymentEntry";
+		//request.getSession().setAttribute("order", order);
+		if(ServiceLocator.getOrderProcessingService().validateItemAvailability(order)){
+			return "redirect:/purchase/paymentEntry";
+		}else {
+			
+			request.setAttribute("message", "Please resubmit item quantities");
+			return "OrderEntryForm";
+		}
 	}
 
 	@RequestMapping(path = "/paymentEntry", method = RequestMethod.GET)
@@ -82,7 +75,9 @@ public class Purchase {
 	}
 	
 	@RequestMapping(path = "/confirmOrder", method = RequestMethod.POST)
-	public String confirmOrder(HttpServletRequest request) throws Exception {
+	public String confirmOrder(HttpServletRequest request, Order order) throws Exception {
+		
+		request.getSession().setAttribute("confirm", ServiceLocator.getOrderProcessingService().processOrder(order));
 		return "redirect:/purchase/viewConfirmation";
 	}
 	
