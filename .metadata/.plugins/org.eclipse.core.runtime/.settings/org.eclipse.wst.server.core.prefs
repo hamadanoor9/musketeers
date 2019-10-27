@@ -1,3 +1,3 @@
 eclipse.preferences.version=1
 module-start-timeout=300000
-runtimes=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<runtimes>\n  <runtime id\="Liberty Runtime" id-set\="true" location\="/Users/mohamed/Documents/workspace/devtools/wlp" name\="Liberty Runtime" runtime-type-id\="com.ibm.ws.st.runtime.wlp" timestamp\="0"/>\n</runtimes>\n
+runtimes=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<runtimes>\n  <runtime id\="Liberty Runtime" id-set\="true" location\="/Users/mohamed/Documents/workspace/devtools/wlp" name\="Liberty Runtime" runtime-type-id\="com.ibm.ws.st.runtime.wlp" timestamp\="0"/>\n  <runtime id\="Liberty Runtime (2)" id-set\="true" location\="/Users/honghuibao/Documents/GitHub/devtools" name\="Liberty Runtime (2)" runtime-type-id\="com.ibm.ws.st.runtime.wlp" timestamp\="0"/>\n</runtimes>\n

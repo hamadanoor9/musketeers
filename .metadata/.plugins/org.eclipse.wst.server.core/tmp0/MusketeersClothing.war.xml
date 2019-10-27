@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive>
     <archive targetInArchive="/WEB-INF/lib/Musketeers-InventoryManagement-EJBClient.jar">
-        <dir sourceOnDisk="/Users/mohamed/Documents/workspace/cse5234/Musketeers-InventoryManagement-EJBClient/build/classes" targetInArchive="/"/>
+        <dir sourceOnDisk="/Users/honghuibao/Documents/GitHub/musketeers/Musketeers-InventoryManagement-EJBClient/build/classes" targetInArchive="/"/>
     </archive>
-    <dir sourceOnDisk="/Users/mohamed/Documents/workspace/cse5234/MusketeersClothing/WebContent" targetInArchive="/"/>
-    <dir sourceOnDisk="/Users/mohamed/Documents/workspace/cse5234/MusketeersClothing/build/classes" targetInArchive="/WEB-INF/classes"/>
+    <archive targetInArchive="/WEB-INF/lib/Musketeers-InventoryManagement-EJB.jar">
+        <dir sourceOnDisk="/Users/honghuibao/Documents/GitHub/musketeers/Musketeers-InventoryManagement-EJB/build/classes" targetInArchive="/"/>
+    </archive>
+    <dir sourceOnDisk="/Users/honghuibao/Documents/GitHub/musketeers/MusketeersClothing/WebContent" targetInArchive="/"/>
+    <dir sourceOnDisk="/Users/honghuibao/Documents/GitHub/musketeers/MusketeersClothing/build/classes" targetInArchive="/WEB-INF/classes"/>
 </archive>

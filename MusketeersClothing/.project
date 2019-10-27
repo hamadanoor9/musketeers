@@ -4,6 +4,7 @@
 	<comment></comment>
 	<projects>
 		<project>Musketeers-InventoryManagement-EJBClient</project>
+		<project>Musketeers-InventoryManagement-EJB</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

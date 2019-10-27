@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 /**
  * Session Bean implementation class InventoryServiceBean
@@ -18,9 +20,22 @@ public class InventoryServiceBean implements InventoryService {
     /**
      * Default constructor. 
      */
-    public InventoryServiceBean() {
+	
+	@PersistenceContext
+	EntityManager entityManager;
+
+    public EntityManager getEntityManager() {
+		return entityManager;
+	}
+
+	public void setEntityManager(EntityManager entityManager) {
+		this.entityManager = entityManager;
+	}
+
+	public InventoryServiceBean() {
         
     }
+	String MY_QUERY = "Select * from Item";
 
 	@Override
 	public boolean updateInventory(List<Item> items) {
@@ -32,20 +47,10 @@ public class InventoryServiceBean implements InventoryService {
 	public Inventory getAvailableInventory() {
 		// TODO Auto-generated method stub
 		Inventory inventory = new Inventory();
-		List<Item> list = new ArrayList<Item>();
-		String[] products = new String[5];
-		products[0] = "Jacket";
-		products[1] = "Pants";
-		products[2] = "Sneakers";
-		products[3] = "Shirt";
-		products[4] = "Shorts";
-					
-		for(int i = 0; i < 5; i++) {
-			Item itm = new Item();
-			itm.setName(products[i]);
-			itm.setPrice(String.valueOf(i+1));
-			list.add(itm);
-		}
+		//List<Item> list = new ArrayList<Item>();
+		
+		List<Item> list = entityManager.createQuery(MY_QUERY, Item.class).getResultList();
+		
 		inventory.setItems(list);
 		return inventory;
 	}
@@ -53,6 +58,17 @@ public class InventoryServiceBean implements InventoryService {
 	@Override
 	public boolean validateQuantity(List<Item> items) {
 		// TODO Auto-generated method stub
+		List<Item> inventoryList = getAvailableInventory().getItems();
+		for(Item item : items) {
+			
+			for(Item inventoryItem : inventoryList) {
+				if(item.getId() == inventoryItem.getId() && item.getAvailableQuantity() > inventoryItem.getAvailableQuantity()) {
+					return false;
+				}
+			}
+			
+		}
+		
 		return true;
 	}
 

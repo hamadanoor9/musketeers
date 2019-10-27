@@ -1,6 +1,5 @@
 package edu.osu.cse5234.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -89,3 +88,5 @@ public class Purchase {
 		return "Confirmation";
 	}
 }
+
+

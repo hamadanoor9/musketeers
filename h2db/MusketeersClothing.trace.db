@@ -1,0 +1,97 @@
+2019-10-24 19:26:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ITEM" not found; SQL statement:
+select * from ITEM [42102-200]
+2019-10-24 19:43:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO ITEM (ITEM_NUMBER, NAME, DESCRIPTION, AVAILABLE_QUANTITY, UNIT_PRICE)
+VALUES(
+1, 'Trucker Jacket', 'Fit and suitable', 10, 19.9),
+(2, 'Work Jacket', 'All cotton with printed pattern', 10, 29.9),
+(3, 'Zip Up Hooded Sweatshirt', 'Heavyweight cotton crossgrain fleece with full zip closure and pouch pocket', 10, 16.9),
+(4, 'Micro Logo Hooded Sweatshirt', 'Heavyweight cotton crossgrain fleece rib gussets', 10, 39.9)
+([*]5, 'Piping Crewneck', 'No description yet', 10, 59,9)"; SQL statement:
+INSERT INTO ITEM (ITEM_NUMBER, NAME, DESCRIPTION, AVAILABLE_QUANTITY, UNIT_PRICE)
+values(
+1, 'Trucker Jacket', 'Fit and suitable', 10, 19.9),
+(2, 'Work Jacket', 'All cotton with printed pattern', 10, 29.9),
+(3, 'Zip Up Hooded Sweatshirt', 'Heavyweight cotton crossgrain fleece with full zip closure and pouch pocket', 10, 16.9),
+(4, 'Micro Logo Hooded Sweatshirt', 'Heavyweight cotton crossgrain fleece rib gussets', 10, 39.9)
+(5, 'Piping Crewneck', 'No description yet', 10, 59,9) [42000-200]
+2019-10-24 19:44:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column count does not match; SQL statement:
+INSERT INTO ITEM (ITEM_NUMBER, NAME, DESCRIPTION, AVAILABLE_QUANTITY, UNIT_PRICE)
+values(
+1, 'Trucker Jacket', 'Fit and suitable', 10, 19.9),
+(2, 'Work Jacket', 'All cotton with printed pattern', 10, 29.9),
+(3, 'Zip Up Hooded Sweatshirt', 'Heavyweight cotton crossgrain fleece with full zip closure and pouch pocket', 10, 16.9),
+(4, 'Micro Logo Hooded Sweatshirt', 'Heavyweight cotton crossgrain fleece rib gussets', 10, 39.9),
+(5, 'Piping Crewneck', 'No description yet', 10, 59,9) [21002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.dml.Insert.prepare(Insert.java:319)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:748)
+2019-10-24 19:44:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column count does not match; SQL statement:
+INSERT INTO ITEM (ITEM_NUMBER, NAME, DESCRIPTION, AVAILABLE_QUANTITY, UNIT_PRICE)
+values(
+1, 'Trucker Jacket', 'Fit and suitable', 10, 19.9),
+(2, 'Work Jacket', 'All cotton with printed pattern', 10, 29.9),
+(3, 'Zip Up Hooded Sweatshirt', 'Heavyweight cotton crossgrain fleece with full zip closure and pouch pocket', 10, 16.9),
+(4, 'Micro Logo Hooded Sweatshirt', 'Heavyweight cotton crossgrain fleece rib gussets', 10, 39.9),
+(5, 'Piping Crewneck', 'No description yet', 10, 59,9) [21002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.dml.Insert.prepare(Insert.java:319)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:748)
+2019-10-27 18:19:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "I" not found; SQL statement:
+SELECT i FROM ITEM [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Select.prepare(Select.java:1206)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:748)

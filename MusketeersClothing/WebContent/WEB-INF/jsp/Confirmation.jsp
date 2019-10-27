@@ -26,8 +26,8 @@
 			<% for(Item item: order.getItems()){ %>
 				<tr>
 					<td><%= item.getName() %></td>
-					<td>$<%= item.getPrice() %></td>
-					<td><%= item.getQuantity() %></td>	
+					<td>$<%= item.getUnitPrice() %></td>
+					<td><%= item.getAvailableQuantity() %></td>	
 	         	</tr>
 	   		
 			

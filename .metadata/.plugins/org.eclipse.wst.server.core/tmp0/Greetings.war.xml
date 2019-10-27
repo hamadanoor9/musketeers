@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<archive>
-    <dir sourceOnDisk="/Users/mohamed/Documents/workspace/cse5234/Greetings/WebContent" targetInArchive="/"/>
-    <dir sourceOnDisk="/Users/mohamed/Documents/workspace/cse5234/Greetings/build/classes" targetInArchive="/WEB-INF/classes"/>
-</archive>
