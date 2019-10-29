@@ -4,7 +4,7 @@ import edu.osu.cse5234.business.view.Inventory;
 import edu.osu.cse5234.business.view.InventoryService;
 import edu.osu.cse5234.business.view.Item;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 import javax.ejb.Stateless;
@@ -35,7 +35,7 @@ public class InventoryServiceBean implements InventoryService {
 	public InventoryServiceBean() {
         
     }
-	String MY_QUERY = "Select * from Item";
+	String MY_QUERY = "Select i from Item i";
 
 	@Override
 	public boolean updateInventory(List<Item> items) {
@@ -60,7 +60,7 @@ public class InventoryServiceBean implements InventoryService {
 		// TODO Auto-generated method stub
 		List<Item> inventoryList = getAvailableInventory().getItems();
 		for(Item item : items) {
-			
+		
 			for(Item inventoryItem : inventoryList) {
 				if(item.getId() == inventoryItem.getId() && item.getAvailableQuantity() > inventoryItem.getAvailableQuantity()) {
 					return false;
