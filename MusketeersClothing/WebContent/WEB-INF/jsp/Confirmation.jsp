@@ -4,6 +4,7 @@
 <%@ page import="edu.osu.cse5234.business.view.Item" %>
 <%@ page import="edu.osu.cse5234.model.PaymentInfo" %>
 <%@ page import="edu.osu.cse5234.model.ShippingInfo" %>
+<%@ page import="edu.osu.cse5234.model.LineItem" %>
     <jsp:include page="Header.jsp" />
 <div class="jumbotron">
   <div class="container">
@@ -25,6 +26,7 @@
 		</tr>
 			<% for(Item item: order.getItems()){ %>
 				<tr>
+				
 					<td><%= item.getName() %></td>
 					<td>$<%= item.getUnitPrice() %></td>
 					<td><%= item.getAvailableQuantity() %></td>	

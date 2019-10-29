@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
     <%@ page import="edu.osu.cse5234.model.Order" %>
     <%@ page import="edu.osu.cse5234.business.view.Item" %>
+    <%@ page import="edu.osu.cse5234.model.LineItem" %>
 <jsp:include page="Header.jsp" />
 <div class="jumbotron">
   <div class="container">

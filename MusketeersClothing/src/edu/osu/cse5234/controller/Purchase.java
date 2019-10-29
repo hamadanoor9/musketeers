@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 
 import edu.osu.cse5234.business.view.*;
+import edu.osu.cse5234.model.LineItem;
 import edu.osu.cse5234.model.Order;
 import edu.osu.cse5234.model.PaymentInfo;
 import edu.osu.cse5234.model.ShippingInfo;
@@ -21,10 +22,12 @@ import edu.osu.cse5234.util.*;
 public class Purchase {
 	@RequestMapping(method = RequestMethod.GET)
 	public String viewOrderEntryForm(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
 		Inventory inventory = ServiceLocator.getInventoryService().getAvailableInventory();
 		
 		Order order = new Order();
 		List<Item> items = inventory.getItems();
+		//List<LineItem> orderItems = order.getItems();
 		order.setItems(items);
 		request.setAttribute("order", order);
 		return "OrderEntryForm";
