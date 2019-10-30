@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="edu.osu.cse5234.model.Order" %>
-<%@ page import="edu.osu.cse5234.business.view.Item" %>
+<%@ page import="edu.osu.cse5234.model.LineItem" %>
 
 <%@ page import="java.util.List" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
@@ -20,9 +20,9 @@
 		</tr>
 			<c:forEach items="${order.items}" var="item" varStatus="loop">
 				<tr>
-					<td><form:input path="items[${loop.index}].name" readonly="true" /></td>
-					<td>$<form:input path="items[${loop.index}].unitPrice" readonly="true" /></td>
-					<td><form:input path="items[${loop.index}].availableQuantity" /></td>
+					<td><form:input path="items[${loop.index}].itemName" readonly="true" /></td>
+					<td>$<form:input path="items[${loop.index}].price" readonly="true" /></td>
+					<td><form:input path="items[${loop.index}].quantity" /></td>
 	         	</tr>
 	   		</c:forEach>
 			<tr>

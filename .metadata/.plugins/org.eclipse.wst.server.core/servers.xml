@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <servers>
-  <server auto-publish-setting="2" auto-publish-time="1" hostname="localhost" id="Liberty Server at localhost" looseConfig="true" name="Liberty Server at localhost" publishWithError="false" runtime-id="Liberty Runtime (2)" server-type="com.ibm.ws.st.server.wlp" server-type-id="com.ibm.ws.st.server.wlp" serverName="defaultServer" serverType="libertyServer" start-timeout="60" stop-timeout="15" timestamp="18" userDirId="Liberty Runtime (2)">
+  <server auto-publish-setting="2" auto-publish-time="1" hostname="localhost" id="Liberty Server at localhost" looseConfig="true" name="Liberty Server at localhost" publishWithError="false" runtime-id="Liberty Runtime (2)" server-type="com.ibm.ws.st.server.wlp" server-type-id="com.ibm.ws.st.server.wlp" serverName="defaultServer" serverType="libertyServer" start-timeout="60" stop-timeout="15" timestamp="21" userDirId="Liberty Runtime (2)">
     <list key="modules" value0="MusketeersClothing::org.eclipse.jst.jee.server:MusketeersClothing::jst.web::4.0" value1="Musketeers-InventoryManagement-EJBEAR::org.eclipse.jst.jee.server:Musketeers-InventoryManagement-EJBEAR::jst.ear::7.0"/>
   </server>
 </servers>

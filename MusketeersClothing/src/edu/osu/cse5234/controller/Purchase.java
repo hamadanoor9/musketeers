@@ -1,5 +1,6 @@
 package edu.osu.cse5234.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -27,8 +28,20 @@ public class Purchase {
 		
 		Order order = new Order();
 		List<Item> items = inventory.getItems();
-		//List<LineItem> orderItems = order.getItems();
-		order.setItems(items);
+		List<LineItem> orderItems = new ArrayList<LineItem>();
+		for(Item i : items) {
+			LineItem li = new LineItem();
+			li.setId(i.getId());
+			li.setItemName(i.getName());
+			li.setItemNumber(i.getItemNumber());
+			li.setPrice(i.getUnitPrice());
+			li.setQuantity(0);
+			orderItems.add(li);
+			//i.setAvailableQuantity(0);
+		}
+		
+		
+		order.setItems(orderItems);
 		request.setAttribute("order", order);
 		return "OrderEntryForm";
 	}
@@ -50,12 +63,16 @@ public class Purchase {
 	@RequestMapping(path = "/paymentEntry", method = RequestMethod.GET)
 	public String viewPaymentEntry(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		request.setAttribute("payment", new PaymentInfo());
+		
 		return "PaymentEntryForm";
 	}
 	
 	@RequestMapping(path = "/submitPayment", method = RequestMethod.POST)
 	public String submitPayment(@ModelAttribute("payment") PaymentInfo payment, HttpServletRequest request) throws Exception {
 		request.getSession().setAttribute("payment", payment);
+		Order order = (Order)request.getSession().getAttribute("order");
+		order.setPayment(payment);
+		request.getSession().setAttribute("order", order);
 		return "redirect:/purchase/shippingEntry";
 	}
 	
@@ -68,6 +85,9 @@ public class Purchase {
 	@RequestMapping(path = "/submitShipping", method = RequestMethod.POST)
 	public String submitShipping(@ModelAttribute("shipping") ShippingInfo shipping, HttpServletRequest request) throws Exception {
 		request.getSession().setAttribute("shipping", shipping);
+		Order order = (Order)request.getSession().getAttribute("order");
+		order.setShipping(shipping);
+		request.getSession().setAttribute("order", order);
 		return "redirect:/purchase/viewOrder";
 	}
 	
@@ -76,12 +96,13 @@ public class Purchase {
 		Order order = new Order();
 		order = (Order) request.getSession().getAttribute("order");
 		request.setAttribute("order", order);
+		
 		return "ViewOrder";
 	}
 	
 	@RequestMapping(path = "/confirmOrder", method = RequestMethod.POST)
-	public String confirmOrder(HttpServletRequest request, Order order) throws Exception {
-		
+	public String confirmOrder(HttpServletRequest request) throws Exception {
+		Order order = (Order) request.getSession().getAttribute("order");
 		request.getSession().setAttribute("confirm", ServiceLocator.getOrderProcessingService().processOrder(order));
 		return "redirect:/purchase/viewConfirmation";
 	}
