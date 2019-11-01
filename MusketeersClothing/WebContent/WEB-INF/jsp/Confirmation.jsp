@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="edu.osu.cse5234.model.Order" %>
-<%@ page import="edu.osu.cse5234.business.view.Item" %>
+<%@ page import="edu.osu.cse5234.model.LineItem" %>
 <%@ page import="edu.osu.cse5234.model.PaymentInfo" %>
 <%@ page import="edu.osu.cse5234.model.ShippingInfo" %>
 <%@ page import="edu.osu.cse5234.model.LineItem" %>
@@ -24,12 +24,12 @@
 			<th>Quantity</th>
 			
 		</tr>
-			<% for(Item item: order.getItems()){ %>
+			<% for(LineItem item: order.getItems()){ %>
 				<tr>
 				
-					<td><%= item.getName() %></td>
-					<td>$<%= item.getUnitPrice() %></td>
-					<td><%= item.getAvailableQuantity() %></td>	
+					<td><%= item.getItemName() %></td>
+					<td>$<%= item.getPrice() %></td>
+					<td><%= item.getQuantity() %></td>	
 	         	</tr>
 	   		
 			
