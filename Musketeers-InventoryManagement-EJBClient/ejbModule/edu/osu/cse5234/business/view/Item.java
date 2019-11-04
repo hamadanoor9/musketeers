@@ -18,7 +18,7 @@ public class Item implements java.io.Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="ID")
 	private int id;
-	
+	//ssss
 	@Column(name="ITEM_NUMBER")
 	private int itemNumber;
 	
